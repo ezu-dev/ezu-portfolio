@@ -3,9 +3,10 @@
 This is my personal portfolio website built with **HTML & CSS**.
 
 ## 🔹 Features
-- Responsive design
-- Clean and modern layout
-- Simple and fast loading
+- Responsive design (mobile & desktop)
+- Clean and modern UI
+- Fast loading pages
+
 
 ## 🔹 Live Demo
 👉 https://ezu-dev.github.io/ezu-portfolio/
@@ -16,4 +17,5 @@ This is my personal portfolio website built with **HTML & CSS**.
 
 ## 🔹 Author
 Ezedin Mohamed Ahmed  
-Beginner Web Developer
+Web Developer (HTML & CSS)  
+Open for freelance projects
