@@ -2,275 +2,182 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
- <title>Ezedin Mohamed Ahmed | Frontend Web Developer</title>
 
-<meta name="description" content="Frontend web developer skilled in HTML and CSS. I build clean, responsive websites and am available for freelance and remote projects.">
+  <title>Ezedin Mohamed Ahmed | Frontend Web Developer</title>
 
-<meta name="keywords" content="Frontend Developer, HTML, CSS, Web Developer, Portfolio, Freelance">
-
+  <!-- SEO -->
+  <meta name="description" content="Frontend web developer skilled in HTML and CSS. I build clean, responsive websites and am available for freelance and remote projects.">
+  <meta name="keywords" content="Frontend Developer, HTML, CSS, Web Developer, Portfolio, Freelance">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
   <meta property="og:title" content="Ezedin Mohamed Ahmed | Frontend Web Developer">
-<meta property="og:description" content="Clean and responsive websites built with HTML and CSS. Open for freelance projects.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://ezu-dev.github.io/ezu-portfolio/">
+  <meta property="og:description" content="Clean and responsive websites built with HTML and CSS. Open for freelance projects.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ezu-dev.github.io/ezu-portfolio/">
+
+  <!-- (Optional) og:image -->
+  <!-- <meta property="og:image" content="https://ezu-dev.github.io/ezu-portfolio/preview.png"> -->
 
   <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+      animation: fadeIn 1.2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
     .container {
-  width: 100%;
-  max-width: 900px;
-  padding: 40px 20px;
-}
+      width: 100%;
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
 
-.hero {
-  text-align: center;
-  margin-bottom: 60px;
-}
+    /* HERO */
+    .hero {
+      text-align: center;
+      margin-bottom: 60px;
+    }
 
-.hero h1 {
-  font-size: 40px;
-  color: #38bdf8;
-}
+    .hero h1 {
+      font-size: 40px;
+      color: #38bdf8;
+    }
 
-.hero h2 {
-  font-weight: normal;
-  margin: 10px 0;
-}
+    .hero h2 {
+      font-weight: normal;
+      margin: 10px 0;
+    }
 
-.section {
-  margin-bottom: 50px;
-}
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 30px;
+      background: #38bdf8;
+      color: #021726;
+      border-radius: 6px;
+    }
 
-.section h3 {
-  color: #38bdf8;
-  margin-bottom: 15px;
-}
+    /* SECTIONS */
+    .section {
+      margin-bottom: 60px;
+    }
 
-.skills {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
+    .section h3 {
+      color: #38bdf8;
+      margin-bottom: 15px;
+    }
 
-.skills li {
-  background: #1e293b;
-  padding: 8px 15px;
-  border-radius: 5px;
-}
+    /* SKILLS */
+    .skills {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
 
-.project {
-  background: #1e293b;
-  padding: 20px;
-  border-radius: 8px;
-}
+    .skills li {
+      background: #1e293b;
+      padding: 8px 15px;
+      border-radius: 6px;
+    }
 
-.project a {
-  color: #38bdf8;
-  text-decoration: none;
-}
+    /* PROJECTS */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
 
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 30px;
-  background: #38bdf8;
-  color: #0f172a;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-}
-    .project + .project {
-  margin-top: 25px;
-}
+    .project {
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 12px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-.project h4 {
-  margin-bottom: 8px;
-}
+    .project:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.35);
+    }
 
-.project p {
-  margin-bottom: 10px;
-}
-a {
-  color: #38bdf8;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
+    .project h4 {
+      color: #38bdf8;
+      margin-bottom: 8px;
+    }
 
-a:hover {
-  color: #0ea5e9;
-  transform: translateY(-3px);
-}
-.project {
-  padding: 15px;
-  border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    /* CONTACT */
+    #contact {
+      max-width: 600px;
+      margin: 80px auto;
+      text-align: center;
+    }
 
-.project:hover {
-  transform: scale(1.03);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-}
-body {
-  animation: fadeIn 1.2s ease-in;
-}
+    #contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 30px;
+    }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-#contact {
-  margin-top: 80px;
-  padding: 40px;
-  text-align: center;
-}
+    #contact input,
+    #contact textarea {
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      font-size: 15px;
+    }
 
-#contact h2 {
-  color: #38bdf8;
-  margin-bottom: 10px;
-}
+    #contact button {
+      padding: 12px;
+      border-radius: 30px;
+      border: none;
+      background: #38bdf8;
+      color: #021726;
+      font-weight: bold;
+      cursor: pointer;
+    }
 
-.contact-links {
-  margin-top: 20px;
-}
+    .contact-links a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 25px;
+      border-radius: 30px;
+      background: #38bdf8;
+      color: #021726;
+    }
 
-.contact-links a {
-  display: inline-block;
-  margin: 10px;
-  padding: 12px 25px;
-  border-radius: 30px;
-  background: #38bdf8;
-  color: #021726;
-  font-weight: bold;
-  transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.contact-links a:hover {
-  background: #0ea5e9;
-  transform: scale(1.08);
-}
-    .contact-form {
-  max-width: 500px;
-  margin: 30px auto 0;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 12px;
-  border-radius: 6px;
-  border: none;
-  outline: none;
-  font-size: 14px;
-}
-
-.contact-form textarea {
-  resize: none;
-  height: 120px;
-}
-
-.contact-form button {
-  padding: 12px;
-  border: none;
-  border-radius: 30px;
-  background: #38bdf8;
-  color: #021726;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.contact-form button:hover {
-  background: #0ea5e9;
-  transform: scale(1.05);
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  margin-top: 20px;
-}
-.project {
-  background: #1e293b;
-  padding: 20px;
-  border-radius: 12px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.35);
-}
-
-.project h4 {
-  margin-bottom: 8px;
-  color: #38bdf8;
-}
-
-.project p {
-  font-size: 14px;
-  margin-bottom: 12px;
-}
-@media (max-width: 600px) {
-  .hero h1 {
-    font-size: 28px;
-  }
-
-  .hero h2 {
-    font-size: 16px;
-  }
-
-  .container {
-    padding: 20px 15px;
-  }
-
-  .section h3 {
-    font-size: 20px;
-  }
-}
-@media (max-width: 600px) {
-  .btn,
-  .contact-links a,
-  .contact-form button {
-    width: 100%;
-    max-width: 300px;
-  }
-}
-
+    /* MOBILE */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 28px;
+      }
+    }
   </style>
 </head>
 <body>
-  <section id="contact">
-  <h2>Contact Me</h2>
-  <p>Send me a message and I’ll get back to you.</p>
-
-  <form action="https://formspree.io/f/abcdwxyz" method="POST" class="contact-form">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" placeholder="Your Message" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
-</section>
-
-  <p>Let’s work together. You can reach me via email or WhatsApp.</p>
-
-  <div class="contact-links">
-    <a href="mailto:ezedin.dev@gmail.com">📧 Email Me</a>
-    <a href="https://wa.me/251950600556" target="_blank">💬 WhatsApp</a>
-  </div>
-</section>
-
   <div class="container">
+
     <!-- HERO -->
     <section class="hero">
       <h1>Ezedin Mohamed Ahmed</h1>
@@ -301,38 +208,56 @@ body {
     </section>
 
     <!-- PROJECTS -->
-<section class="section">
-  <h3>Projects</h3>
+    <section class="section">
+      <h3>Projects</h3>
 
-  <div class="projects-grid">
-    <div class="project">
-      <h4>Personal Portfolio Website</h4>
-      <p>Responsive portfolio website built with HTML and CSS.</p>
-      <a href="https://github.com/ezu-dev/ezu-portfolio" target="_blank">
-        Source Code
-      </a>
-    </div>
+      <div class="projects-grid">
+        <div class="project">
+          <h4>Personal Portfolio Website</h4>
+          <p>Responsive portfolio website built with HTML and CSS.</p>
+          <a href="https://github.com/ezu-dev/ezu-portfolio" target="_blank">Source Code</a>
+        </div>
 
-    <div class="project">
-      <h4>Business Landing Page</h4>
-      <p>Modern landing page for a small business using HTML & CSS.</p>
-      <a href="#">Live Demo</a>
-    </div>
+        <div class="project">
+          <h4>Business Landing Page</h4>
+          <p>Modern landing page for a small business.</p>
+          <a href="#">Live Demo</a>
+        </div>
 
-    <div class="project">
-      <h4>Hotel Booking Website (UI)</h4>
-      <p>Frontend UI design concept for a hotel website.</p>
-      <a href="#">UI Preview</a>
-    </div>
-  </div>
-</section>
-
+        <div class="project">
+          <h4>Hotel Booking Website (UI)</h4>
+          <p>Frontend UI concept for a hotel website.</p>
+          <a href="#">UI Preview</a>
+        </div>
+      </div>
+    </section>
 
     <!-- CONTACT -->
-    <section class="section" id="contact">
-      <h3>Contact</h3>
-      <p>Email: <a href="mailto:ezedin.dev@gmail.com">ezedin.dev@gmail.com</a></p>
+   <section id="contact">
+  <h2>Contact Me</h2>
+  <p>Send me a message and I’ll get back to you.</p>
+
+  <form action="https://formspree.io/f/mabcdxyz" method="POST" class="contact-form">
+
+    <input type="text" name="name" placeholder="Your Name" required>
+
+    <input type="email" name="email" placeholder="Your Email" required>
+
+    <textarea name="message" placeholder="Your Message" required></textarea>
+
+    <!-- Anti-spam -->
+    <input type="text" name="_gotcha" style="display:none">
+
+    <button type="submit">Send Message</button>
+  </form>
+      <p style="margin-top:30px;">Or contact me directly:</p>
+
+      <div class="contact-links">
+        <a href="mailto:ezedin.dev@gmail.com">📧 Email</a>
+        <a href="https://wa.me/251950600556" target="_blank">💬 WhatsApp</a>
+      </div>
     </section>
+
   </div>
 </body>
 </html>
